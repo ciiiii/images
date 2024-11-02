@@ -15,7 +15,7 @@ RUN wget http://ftp.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.gz \
     && cd gcc-14.2.0 \
     && ./contrib/download_prerequisites \
     && ./configure -v --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --prefix=/usr/local/gcc-14.1.0 --enable-checking=release --enable-languages=c,c++ --disable-multilib --program-suffix=-14.2.0 \
-    && make -j8 \
+    && make -j4 \
     && sudo make install \
     && cd .. \
     && rm -rf gcc-14.2.0 gcc-14.2.0.tar.gz
